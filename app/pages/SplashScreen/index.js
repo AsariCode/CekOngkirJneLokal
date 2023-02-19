@@ -3,11 +3,11 @@ import { StyleSheet, View, Image } from 'react-native';
 import { useTheme } from 'react-native-paper';
 import logo from '@assets/images/logo.png';
 import { CustomText } from "@components";
+import realm from "@database"
 
 
 const SplashScreen = ({ navigation }) => {
-    // const theme = useTheme();
-    const { colors } = useTheme();
+  const { colors } = useTheme();
 
   useEffect(() => {
     setTimeout(() => {
