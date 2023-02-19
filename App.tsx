@@ -14,7 +14,9 @@ const theme = {
     secondary: '#7c1416',
     acentColor: '#da4c4d',
     brown50: '#c6aaa2',
-    brown10: '#fdf5ed'
+    brown10: '#fdf5ed',
+    white: '#fff',
+    charcoal: '#101010',
   },
 };
 
