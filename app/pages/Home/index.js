@@ -6,7 +6,7 @@ import upload from '@assets/images/cloud-computing.png';
 import { CustomText } from '@components';
 import { useTheme } from 'react-native-paper';
 
-const Home = () => {
+const Home = ({navigation}) => {
   const {colors} = useTheme()
   return (
     <View style={styles.container}>
@@ -18,9 +18,10 @@ const Home = () => {
       </View>
       <View style={styles.menuContainer}>
       <CustomText color={colors.white} variant="subtitle2" bold style={{marginBottom: 24, marginTop: 16}}>
-        CEK RESI JNE KAB. WONOSOBO
+        CEK ONGKIR KHUSUS OLSHOP { '\n' }JNE KAB. WONOSOBO
       </CustomText>
-        <TouchableOpacity style={[styles.menuItem, styles.shadow]}>
+        <TouchableOpacity style={[styles.menuItem, styles.shadow]} 
+          onPress={()=>navigation.navigate('UploadData')}>
           <Image
             source={upload}
             style={styles.icon}
@@ -94,7 +95,7 @@ const styles = StyleSheet.create({
     marginBottom: 10
   },
   version: {
-    marginTop: 28, 
+    marginTop: 16, 
     // textAlign: 'center',
     width: '100%'
   }

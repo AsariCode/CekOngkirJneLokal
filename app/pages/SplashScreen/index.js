@@ -22,10 +22,10 @@ const SplashScreen = ({ navigation }) => {
         style={styles.logo}
       />
       <CustomText color={colors.white} variant="title" bold style={{marginBottom: 8, marginTop: 16}}>
-        CEK RESI LOKAL JNE 
+        CEK ONGKIR KHUSUS OLSHOP 
       </CustomText>
       <CustomText color={colors.white} variant="subtitle2" bold>
-        KABUPATEN WONOSOBO
+        JNE KAB. WONOSOBO
       </CustomText>
     </View>
   );
