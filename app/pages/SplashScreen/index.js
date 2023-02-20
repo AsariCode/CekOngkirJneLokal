@@ -1,22 +1,27 @@
-import React, { useEffect } from 'react';
-import { StyleSheet, View, Image } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { StyleSheet, View, Image, TouchableOpacity } from 'react-native';
 import { useTheme } from 'react-native-paper';
 import logo from '@assets/images/logo.png';
 import { CustomText } from "@components";
-import realm from "@database"
+import database from '@database';
+import datajson from "@assets/data/datajson.json"
+
 
 
 const SplashScreen = ({ navigation }) => {
   const { colors } = useTheme();
+  const [data, setData] = useState([]);
 
-  useEffect(() => {
-    setTimeout(() => {
-      navigation.replace('Home');
-    }, 1000);
-  }, []);
+  const filtered = () => {
+    const dataToInput = datajson.Sheet || []
+    // const filteredData = dataToInput.filter(item => item.KEC === "Salem");
+    const filteredData = dataToInput.filter(item => item.KEC.indexOf("Bantar") > -1);
+    setData(filteredData)
+  }
 
   return (
     <View style={[styles.container, {backgroundColor: colors.primary}]}>
+      {console.log("Dataaa", data)}
       <Image
         source={logo}
         style={styles.logo}
@@ -27,6 +32,13 @@ const SplashScreen = ({ navigation }) => {
       <CustomText color={colors.white} variant="subtitle2" bold>
         JNE KAB. WONOSOBO
       </CustomText>
+      <TouchableOpacity onPress={()=>filtered()}>
+        <CustomText>PressMe</CustomText>
+      </TouchableOpacity>
+      {data?.map((record) => (
+        <CustomText>{record.PROV} - {record.KAB} - {record.KEC} - {record.KEL}</CustomText>
+      ))}
+
     </View>
   );
 };

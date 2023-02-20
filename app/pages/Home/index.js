@@ -20,14 +20,14 @@ const Home = ({navigation}) => {
       <CustomText color={colors.white} variant="subtitle2" bold style={{marginBottom: 24, marginTop: 16}}>
         CEK ONGKIR KHUSUS OLSHOP { '\n' }JNE KAB. WONOSOBO
       </CustomText>
-        <TouchableOpacity style={[styles.menuItem, styles.shadow]} 
+        {/* <TouchableOpacity style={[styles.menuItem, styles.shadow]} 
           onPress={()=>navigation.navigate('UploadData')}>
           <Image
             source={upload}
             style={styles.icon}
           />
           <CustomText style={styles.menuText}>Upload Data</CustomText>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
         <TouchableOpacity style={[styles.menuItem, styles.shadow]}>
           <Image
             source={ongkir}
