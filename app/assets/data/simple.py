@@ -9,6 +9,8 @@ with open('datajson.json', 'r') as file:
         key = f"{dt['KEC']}{dt['KAB']}"
         print(key)
         if not key in alreadyinput:
+            searchtext = f"{dt['KEC']}{dt['KAB']}{dt['PROV']}"
+            dt["search"]=searchtext
             toinput.append(dt)
             alreadyinput.append(key)
 with open('simpledata.json', 'w') as file:

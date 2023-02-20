@@ -14,7 +14,7 @@ const SplashScreen = ({ navigation }) => {
   const filtered = () => {
     const dataToInput = simpledata || []
     // const filteredData = dataToInput.filter(item => item.KEC === "Salem");
-    const filteredData = dataToInput.filter(item => item.KEC.indexOf("Bantar") > -1);
+    const filteredData = dataToInput.filter(item => item.search.indexOf("Sale") > -1);
     setData(filteredData)
   }
 
