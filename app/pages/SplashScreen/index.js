@@ -3,8 +3,7 @@ import { StyleSheet, View, Image, TouchableOpacity } from 'react-native';
 import { useTheme } from 'react-native-paper';
 import logo from '@assets/images/logo.png';
 import { CustomText } from "@components";
-import database from '@database';
-import datajson from "@assets/data/datajson.json"
+import simpledata from "@assets/data/simpledata.json"
 
 
 
@@ -13,7 +12,7 @@ const SplashScreen = ({ navigation }) => {
   const [data, setData] = useState([]);
 
   const filtered = () => {
-    const dataToInput = datajson.Sheet || []
+    const dataToInput = simpledata || []
     // const filteredData = dataToInput.filter(item => item.KEC === "Salem");
     const filteredData = dataToInput.filter(item => item.KEC.indexOf("Bantar") > -1);
     setData(filteredData)
@@ -36,7 +35,7 @@ const SplashScreen = ({ navigation }) => {
         <CustomText>PressMe</CustomText>
       </TouchableOpacity>
       {data?.map((record) => (
-        <CustomText>{record.PROV} - {record.KAB} - {record.KEC} - {record.KEL}</CustomText>
+        <CustomText>{record.PROV} - {record.KAB} - {record.KEC} </CustomText>
       ))}
 
     </View>
