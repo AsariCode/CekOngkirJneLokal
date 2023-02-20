@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, View, Image, TouchableOpacity } from 'react-native';
 import { useTheme } from 'react-native-paper';
 import logo from '@assets/images/logo.png';
 import { CustomText } from "@components";
 import simpledata from "@assets/data/simpledata.json"
-
 
 
 const SplashScreen = ({ navigation }) => {
