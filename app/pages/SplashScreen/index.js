@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { StyleSheet, View, Image, TouchableOpacity } from 'react-native';
 import { useTheme } from 'react-native-paper';
 import logo from '@assets/images/logo.png';
@@ -9,6 +9,13 @@ import simpledata from "@assets/data/simpledata.json"
 const SplashScreen = ({ navigation }) => {
   const { colors } = useTheme();
   const [data, setData] = useState([]);
+  
+  useEffect(() => {
+    // Update the document title using the browser API
+    setTimeout(()=>{
+      navigation.replace("Home")
+    }, 3000)
+  }, []);
 
   const filtered = () => {
     const dataToInput = simpledata || []
@@ -25,18 +32,17 @@ const SplashScreen = ({ navigation }) => {
         style={styles.logo}
       />
       <CustomText color={colors.white} variant="title" bold style={{marginBottom: 8, marginTop: 16}}>
-        CEK ONGKIR KHUSUS OLSHOP 
+        CEK ONGKIR VIP CUSTOMER
       </CustomText>
       <CustomText color={colors.white} variant="subtitle2" bold>
         JNE KAB. WONOSOBO
       </CustomText>
-      <TouchableOpacity onPress={()=>filtered()}>
+      {/* <TouchableOpacity onPress={()=>filtered()}>
         <CustomText>PressMe</CustomText>
       </TouchableOpacity>
       {data?.map((record) => (
         <CustomText>{record.PROV} - {record.KAB} - {record.KEC} </CustomText>
-      ))}
-
+      ))} */}
     </View>
   );
 };

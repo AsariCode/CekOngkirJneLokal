@@ -17,6 +17,9 @@ const theme = {
     brown10: '#fdf5ed',
     white: '#fff',
     charcoal: '#101010',
+    black: '#000',
+    lightGray: "#F8F8F8",
+    lightGray2: "#D3D3D3"
   },
 };
 

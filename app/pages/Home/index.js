@@ -18,7 +18,7 @@ const Home = ({navigation}) => {
       </View>
       <View style={styles.menuContainer}>
       <CustomText color={colors.white} variant="subtitle2" bold style={{marginBottom: 24, marginTop: 16}}>
-        CEK ONGKIR KHUSUS OLSHOP { '\n' }JNE KAB. WONOSOBO
+        CEK ONGKIR VIP CUSTOMER { '\n' }JNE KAB. WONOSOBO
       </CustomText>
         {/* <TouchableOpacity style={[styles.menuItem, styles.shadow]} 
           onPress={()=>navigation.navigate('UploadData')}>
@@ -28,7 +28,9 @@ const Home = ({navigation}) => {
           />
           <CustomText style={styles.menuText}>Upload Data</CustomText>
         </TouchableOpacity> */}
-        <TouchableOpacity style={[styles.menuItem, styles.shadow]}>
+        <TouchableOpacity style={[styles.menuItem, styles.shadow]}
+          onPress={()=>navigation.navigate('CekOngkir')}>
+
           <Image
             source={ongkir}
             style={styles.icon}
