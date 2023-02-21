@@ -1,8 +1,8 @@
 import React from 'react';
 import {
-  SafeAreaView, Text, View,
+  SafeAreaView, 
 } from 'react-native';
-import { MD3LightTheme as DefaultTheme, Provider as PaperProvider, useTheme } from 'react-native-paper';
+import { MD3LightTheme as DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import NavigationRouter from './app/NavigationRouter';
 
 
