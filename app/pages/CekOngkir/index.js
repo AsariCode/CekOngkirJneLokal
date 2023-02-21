@@ -23,6 +23,10 @@ const CekOngkir = () => {
     setFilteredSuggestions(filteredData);
   };
 
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
   const renderItem = ({ item }) => (
     <TouchableOpacity
       style={styles.item}
@@ -84,13 +88,13 @@ const CekOngkir = () => {
           <CustomText color={colors.charcoal}  style={{marginBottom: 4}} variant="subtitle2">Hasil Pencarian</CustomText>
           {selected ?
             <>
-              <CustomText color={colors.charcoal} >Kota Asal: Kab. Wonosobo  </CustomText>
+              {/* <CustomText color={colors.charcoal} >Kota Asal: Kab. Wonosobo  </CustomText> */}
               <CustomText color={colors.charcoal} >Kota Tujuan: {selected.KEC} -  {selected.KAB} - {selected.PROV}  </CustomText>
-              <CustomText color={colors.charcoal} style={{marginTop: 10}} bold>Ongkir: {selected.ONGKIR}  </CustomText>
+              <CustomText color={colors.primary} style={{marginTop: 10}} bold>Ongkir: {numberWithCommas(selected.ONGKIR)}  </CustomText>
             </>
             :
             <>
-              <CustomText color={colors.charcoal} >Belum ada hasil pencarian</CustomText>
+              <CustomText color={colors.charcoal}  >Belum ada hasil pencarian</CustomText>
             </>
           }
         </View>

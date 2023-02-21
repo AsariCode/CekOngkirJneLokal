@@ -33,10 +33,10 @@ function NavigationRouter() {
           options={{ 
             title: 'Cek Ongkir', 
             headerStyle: {
-              backgroundColor: '#d90b14'
+              // backgroundColor: '#d90b14'
             },
             headerTitleStyle: {
-              color: 'white'
+              // color: 'white'
             }
         }}
         />
