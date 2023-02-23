@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  SafeAreaView, 
+  View, 
 } from 'react-native';
 import { MD3LightTheme as DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import NavigationRouter from './app/NavigationRouter';
@@ -26,9 +26,9 @@ const theme = {
 function App(): JSX.Element {
   return (
     <PaperProvider theme={theme}>
-      <SafeAreaView style={{flex: 1}}>
+      <View style={{flex: 1}}>
         <NavigationRouter />
-      </SafeAreaView>
+      </View>
     </PaperProvider>
   );
 }

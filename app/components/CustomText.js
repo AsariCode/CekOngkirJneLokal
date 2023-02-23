@@ -7,7 +7,7 @@ const CustomText = (props) => {
   
   const styles = StyleSheet.create({
     text: {
-      fontSize: 16,
+      fontSize: 15,
       fontFamily: 'OpenSans-Regular',
       color: color,
       fontWeight: bold ? 'bold' : 'normal'

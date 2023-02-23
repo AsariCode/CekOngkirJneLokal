@@ -9,3 +9,5 @@
     react: 18.2.0 => 18.2.0 
     react-native: 0.71.3 => 0.71.3 
 
+
+## generate data using simple .py 
